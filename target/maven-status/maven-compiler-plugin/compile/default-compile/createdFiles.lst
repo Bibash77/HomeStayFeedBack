@@ -1,0 +1,6 @@
+com\customercrud\demo\services\CustomerServiceImpl.class
+com\customercrud\demo\repository\CustomerRepository.class
+com\customercrud\demo\entity\Customer.class
+com\customercrud\demo\resources\CustomerResource.class
+com\customercrud\demo\DemoApplication.class
+com\customercrud\demo\services\CustomerService.class
