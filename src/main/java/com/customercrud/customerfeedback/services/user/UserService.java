@@ -1,7 +1,6 @@
-/*
-package com.Usercrud.Userfeedback.services;
+package com.customercrud.customerfeedback.services.user;
 
-import com.Usercrud.Userfeedback.entity.User;
+import com.customercrud.customerfeedback.entity.User;
 
 import java.util.List;
 
@@ -11,5 +10,5 @@ public interface UserService {
     void addUser(User User);
     void updateUser(User User);
     void deleteUser(Integer id);
+    User findByUserName(String userName);
 }
-*/

@@ -1,3 +1,4 @@
+/*
 package com.customercrud.customerfeedback.resources;
 
 import com.customercrud.customerfeedback.entity.Customer;
@@ -52,9 +53,11 @@ public class CustomerResource {
         return "redirect:/api";
     }
 
+*/
 /*
 -------------------------------for json output--------------------------------------------
-*/
+*//*
+
 
     @GetMapping("/customers")
     public ResponseEntity<List<Customer>> getAllCustomer() {
@@ -68,3 +71,4 @@ public class CustomerResource {
         return ResponseEntity.ok().body(customer);
     }
 }
+*/
