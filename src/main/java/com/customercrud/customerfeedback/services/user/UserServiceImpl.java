@@ -1,5 +1,6 @@
 package com.customercrud.customerfeedback.services.user;
 
+import com.customercrud.customerfeedback.core.UserType;
 import com.customercrud.customerfeedback.entity.User;
 import com.customercrud.customerfeedback.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -41,5 +42,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findByUserName(String userName) {
         return userRepository.findByUserName(userName);
+    }
+
+    @Override
+    public List<User> findUserByUserType(UserType userType) {
+        return userRepository.findAllByUserType(userType);
     }
 }

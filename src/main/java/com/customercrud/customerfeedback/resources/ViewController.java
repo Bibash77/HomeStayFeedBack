@@ -1,6 +1,8 @@
 package com.customercrud.customerfeedback.resources;
 
+import com.customercrud.customerfeedback.core.UserType;
 import com.customercrud.customerfeedback.entity.User;
+import com.customercrud.customerfeedback.services.feedback.FeedbackService;
 import com.customercrud.customerfeedback.services.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -12,12 +14,16 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Controller
 public class ViewController {
     @Autowired
     private UserService userService;
+
+    @Autowired
+    private FeedbackService feedbackService;
 
     @RequestMapping(method = RequestMethod.GET)
     public String index(ModelMap model) {
@@ -52,8 +58,21 @@ public class ViewController {
     }
 
     @GetMapping("/feedback-list")
-    public String loadFeedbackList(){
+    public String loadFeedbackList(ModelMap modelMap){
+        List<User> users = userService.findUserByUserType(UserType.USER); // only client user can give feedback
+        modelMap.put("users" , users);
         return "feedback-list";
+    }
+
+    @GetMapping("/feed-back/{id}")
+    public String loadFeedbackIndividual(@PathVariable String id, ModelMap modelMap){
+        User user = userService.findById(Integer.valueOf(id));
+        modelMap.put("user" , user);
+        return "individual-feedback";
+    }
+    @GetMapping("/summary")
+    public String loadFeedbackList(){
+        return "summary";
     }
 
     @GetMapping("/logout")

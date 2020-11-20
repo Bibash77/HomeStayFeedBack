@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
 import java.util.Map;
+import java.util.Objects;
 
 @RestController
 @RequestMapping("/feedback")
@@ -52,12 +53,13 @@ public class FeedbackController {
         return ResponseEntity.ok().body("succesfully submitted your feedback !!");
     }
 
-    public ObjectMapper getObjectMapper() {
-        return objectMapper;
-    }
-
-    public void setObjectMapper(ObjectMapper objectMapper) {
-        this.objectMapper = objectMapper;
+    @GetMapping("/{id}")
+    public ResponseEntity<?> getAnswers(@PathVariable String id) {
+        User user = userService.findById(Integer.valueOf(id));
+        if(user == null){
+            ResponseEntity.status(200).body(null);
+        }
+        return ResponseEntity.status(200).body(Objects.requireNonNull(user).getFeedBack().getRatingData());
     }
 
     static boolean isInt(String s)

@@ -29,6 +29,13 @@
             <button type="button" class="btn background ml-4">
                 Give Feedback
             </button>
+
+        </a>
+        <a onclick="window.location.href= '/feed-back/'+ sessionStorage.getItem('userId')">
+            <button type="button" class="btn btn-success ml-4">
+                My Feedback
+            </button>
+
         </a>
     </div>
 </div>
