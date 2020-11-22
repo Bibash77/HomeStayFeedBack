@@ -10,24 +10,24 @@
     List<Map<Object, Object>> list = new ArrayList<Map<Object, Object>>();
 
     map = new HashMap<Object, Object>();
-    map.put("label", "1 star");
+    map.put("label", "strongly like");
     map.put("y", 35);
     map.put("exploded", true);
     list.add(map);
     map = new HashMap<Object, Object>();
-    map.put("label", "2 star");
+    map.put("label", "like");
     map.put("y", 20);
     list.add(map);
     map = new HashMap<Object, Object>();
-    map.put("label", "3 star");
+    map.put("label", "neutral");
     map.put("y", 18);
     list.add(map);
     map = new HashMap<Object, Object>();
-    map.put("label", "4 star");
+    map.put("label", "dislike");
     map.put("y", 15);
     list.add(map);
     map = new HashMap<Object, Object>();
-    map.put("label", "5 star");
+    map.put("label", "strongly dislike");
     map.put("y", 5);
     list.add(map);
 
@@ -45,7 +45,7 @@
                 exportFileName: "New Year Resolutions",
                 exportEnabled: true,
                 title:{
-                    text: "Overall Rating"
+                    text: "Overall Feedback Points"
                 },
                 data: [{
                     type: "pie",

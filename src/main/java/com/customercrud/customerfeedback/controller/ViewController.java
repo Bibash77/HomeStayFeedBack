@@ -1,6 +1,6 @@
-package com.customercrud.customerfeedback.resources;
+package com.customercrud.customerfeedback.controller;
 
-import com.customercrud.customerfeedback.core.UserType;
+import com.customercrud.customerfeedback.base.UserType;
 import com.customercrud.customerfeedback.entity.User;
 import com.customercrud.customerfeedback.services.feedback.FeedbackService;
 import com.customercrud.customerfeedback.services.user.UserService;
@@ -35,7 +35,7 @@ public class ViewController {
         // todo find user type and return view according to it
         User user = userService.findByUserName(username);
         if (user == null) {
-            modelMap.put("error" , "user not found");
+            modelMap.put("error" , "No user found !!");
             return "index";
         }
         if(!user.getPasword().equals(password)){

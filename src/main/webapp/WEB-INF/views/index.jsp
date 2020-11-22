@@ -6,8 +6,27 @@
 <head>
     <title>Test</title>
 </head>
+<style>
+    .simple-login-container{
+        width:300px;
+        max-width:100%;
+        margin:50px auto;
+    }
+    .simple-login-container h2{
+        text-align:center;
+        font-size:20px;
+    }
+
+    .simple-login-container .btn-login{
+        background-color:#FF5964;
+        color:#fff;
+    }
+    a{
+        color:#fff;
+    }
+</style>
 <body class="background">
-<div class="container">
+<%--<div class="container">
     <div class="row">
         <div class="col-md-12 min-vh-100 d-flex flex-column justify-content-center">
             <div class="row">
@@ -51,8 +70,39 @@
         <!--/col-->
     </div>
     <!--/row-->
-</div>
+</div>--%>
 <!--/container-->
+
+
+<div class="simple-login-container" style="margin-top: 150px;">
+    <form class="form" autocomplete="off" id="formLogin" action="<c:url value="/login" />"
+          method="POST">
+    <h2>Login Form</h2>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="text" class="form-control" placeholder="Username" name="username">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="password" placeholder="Enter your Password" class="form-control" name="password">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <input type="submit" class="btn btn-success" placeholder="Enter your Password" style="width: 100%;">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 form-group">
+            <a style="width: 100%;" href="#" class="btn btn-primary" data-toggle="modal" data-target="#registerModal">
+                Register
+            </a>
+        </div>
+    </div>
+    </form>
+    <p class="text-center text-danger">${error}</p>
+</div>
 
 <%--register modal--%>
 <!-- Modal -->
@@ -61,7 +111,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header background">
-                <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                <h5 class="modal-title" id="registerModalLabel">Register Form</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -85,27 +135,14 @@
                         <input type="password" class="form-control" id="password" name="pasword">
                     </div>
                     <div class="form-group">
-                        <label for="phoneNumber" class="col-form-label">Phone Number:</label>
-                        <input type="number" name="phoneNumber" class="form-control" id="phoneNumber">
-                    </div>
-                    <div class="form-group">
                         <label for="address" class="col-form-label">Address:</label>
                         <input type="text" name="address" class="form-control" id="address">
-                    </div>
-                    <div class="form-group">
-                        <label for="gender" class="col-form-label">Gender:</label>
-                        <select class="form-control" name="gender" id="gender">
-                            <option selected hidden>Select Gender</option>
-                            <option>Male</option>
-                            <option>Female</option>
-                            <option>Other</option>
-                        </select>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                <button type="button" class="btn background" onclick="registerUser()">Register</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">Cancel</button>
+                <button type="button" class="btn background" onclick="registerUser()">Submit</button>
             </div>
         </div>
     </div>

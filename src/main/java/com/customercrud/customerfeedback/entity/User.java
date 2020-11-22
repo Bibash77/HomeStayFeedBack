@@ -1,6 +1,6 @@
 package com.customercrud.customerfeedback.entity;
 
-import com.customercrud.customerfeedback.core.UserType;
+import com.customercrud.customerfeedback.base.UserType;
 import com.sun.istack.internal.NotNull;
 import lombok.Getter;
 import lombok.Setter;
@@ -26,13 +26,10 @@ public class User {
     private String pasword;
 
     @NotNull
-    private String gender;
+    private String address;
 
     @NotNull
     private String email;
-
-    @NotNull
-    private String phoneNumber;
 
     @NotNull
     private UserType userType;
