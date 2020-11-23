@@ -1,6 +1,6 @@
 package com.customercrud.customerfeedback.services.user;
 
-import com.customercrud.customerfeedback.core.UserType;
+import com.customercrud.customerfeedback.base.UserType;
 import com.customercrud.customerfeedback.entity.User;
 
 import java.util.List;

@@ -17,7 +17,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <start-class>com.customercrud.customerfeedback.HomeStayFeedBackApplication</start-class>
+        <start-class>com.customercrud.customerfeedback.AgroFeedBackApplication</start-class>
     </properties>
 
     <dependencies>

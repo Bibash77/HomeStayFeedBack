@@ -1,7 +1,7 @@
 package com.customercrud.customerfeedback;
 
-import com.customercrud.customerfeedback.core.UserConst;
-import com.customercrud.customerfeedback.core.UserType;
+import com.customercrud.customerfeedback.base.UserConst;
+import com.customercrud.customerfeedback.base.UserType;
 import com.customercrud.customerfeedback.entity.User;
 import com.customercrud.customerfeedback.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,17 +16,17 @@ import javax.annotation.PostConstruct;
 
 @SpringBootApplication
 @EnableSwagger2
-public class HomeStayFeedBackApplication extends SpringBootServletInitializer {
+public class AgroFeedBackApplication extends SpringBootServletInitializer {
     @Autowired
     private UserRepository userRepository;
 
     public static void main(String[] args) {
-        SpringApplication.run(HomeStayFeedBackApplication.class, args);
+        SpringApplication.run(AgroFeedBackApplication.class, args);
     }
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-        return application.sources(HomeStayFeedBackApplication.class);
+        return application.sources(AgroFeedBackApplication.class);
     }
 
     @PostConstruct
@@ -36,9 +36,7 @@ public class HomeStayFeedBackApplication extends SpringBootServletInitializer {
             User user = new User();
             user.setUserName(UserConst.DEFAULT_USERNAME);
             user.setEmail("admin@gmail.com");
-            user.setGender("male");
             user.setFullName("Administrator");
-            user.setPhoneNumber("9888");
             user.setPasword(UserConst.DEFAULT_PASSWORD);
             user.setUserType(UserType.ADMIN);
             userRepository.save(user);

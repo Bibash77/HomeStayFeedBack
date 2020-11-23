@@ -5,14 +5,14 @@
     <title>Feedback</title>
     <style>
         label:before {
-            content: '☆';
+            content: '♡';
             color: black;
             font-size: 1em;
         }
 
         label.on:before {
-            content: '★';
-            color: yellow;
+            content: '♡';
+            color: #ff0000;
             /* uncomment for iOS */
             /*   font-size: 2.4em;
               top: -0.1em;
@@ -20,8 +20,8 @@
         }
 
         input:checked + label:before {
-            content: '★';
-            color: yellow;
+            content: '♡';
+            color: #ff0000;
             /* uncomment for iOS */
             /*   font-size: 2.4em;
               top: -0.1em;
@@ -62,12 +62,12 @@
 <div class="container" id="all" style="margin-top: 100px;">
     <div class="row">
         <div class="col-md-12">
-            <div class="card shadow-lg p-3 background">
-                <div class="card-title text-white">
+            <div class="card shadow-lg p-3 secondary">
+                <div class="card-title ">
                     <h6 class="text-center">User Detail</h6>
                 </div>
                 <div class="card-body">
-                    <table class="table table-bordered text-white">
+                    <table class="table table-bordered">
                         <thead>
                         <tr></tr>
                         </thead>
@@ -83,14 +83,6 @@
                         <tr>
                             <td><strong>Email</strong></td>
                             <td>${user.email}</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Contact</strong></td>
-                            <td>${user.phoneNumber}</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Gender</strong></td>
-                            <td>${user.gender}</td>
                         </tr>
                         <tr>
                             <td><strong>Comments/Suggestion</strong></td>
@@ -118,171 +110,156 @@
             </div>
         </div>
         <div class="col-md-12" style="margin-top: 100px;">
-            <div class="card background shadow  p-3">
+            <div class="card secondary shadow  p-3">
                 <div class="card-title">
-                    <h6 class="text-center text-white">Feedbacks</h6>
+                    <h6 class="text-center">Feedbacks</h6>
                 </div>
                 <div class="body">
 
-                    <table class="table table-bordered text-white">
+                    <table class="table table-bordered">
                         <tr>
-                            <td><p class="c-margin">How accurate was the reservation record ?</p></td>
-                            <td><input type="checkbox" name="reserveRecord" id="a1" value="1">
+                            <td><p class="c-margin">1.Did you get the agricultural goods fresh and of good quality?</p></td>
+                            <td><input type="checkbox" name="foodQuality" id="a1" value="1">
                                 <label for="a1"></label>
-                                <input type="checkbox" name="reserveRecord" id="a2" value="2">
+                                <input type="checkbox" name="foodQuality" id="a2" value="2">
                                 <label for="a2"></label>
-                                <input type="checkbox" name="reserveRecord" id="a3" value="3">
+                                <input type="checkbox" name="foodQuality" id="a3" value="3">
                                 <label for="a3"></label>
-                                <input type="checkbox" name="reserveRecord" id="a4" value="4">
+                                <input type="checkbox" name="foodQuality" id="a4" value="4">
                                 <label for="a4"></label>
-                                <input type="checkbox" name="reserveRecord" id="a5" value="5">
+                                <input type="checkbox" name="foodQuality" id="a5" value="5">
                                 <label for="a5"></label></td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How would you rate your overall experience?</p></td>
+                            <td><p class="c-margin">2.Was the price reasonable of the agricultural goods?</p></td>
                             <td>
-                                <input type="checkbox" name="experience" id="b1" value="1">
+                                <input type="checkbox" name="fairPrice" id="b1" value="1">
                                 <label for="b1"></label>
-                                <input type="checkbox" name="experience" id="b2" value="2">
+                                <input type="checkbox" name="fairPrice" id="b2" value="2">
                                 <label for="b2"></label>
-                                <input type="checkbox" name="experience" id="b3" value="3">
+                                <input type="checkbox" name="fairPrice" id="b3" value="3">
                                 <label for="b3"></label>
-                                <input type="checkbox" name="experience" id="b4" value="4">
+                                <input type="checkbox" name="fairPrice" id="b4" value="4">
                                 <label for="b4"></label>
-                                <input type="checkbox" name="experience" id="b5" value="5">
+                                <input type="checkbox" name="fairPrice" id="b5" value="5">
                                 <label for="b5"></label></td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How clean and comfortable was room?</p></td>
+                            <td><p class="c-margin">3.How was the packaging of the agricultural goods?.</p></td>
                             <td>
-                                <input type="checkbox" name="roomStatus" id="r1" value="1">
+                                <input type="checkbox" name="packaging" id="r1" value="1">
                                 <label for="r1"></label>
-                                <input type="checkbox" name="roomStatus" id="r2" value="2">
+                                <input type="checkbox" name="packaging" id="r2" value="2">
                                 <label for="r2"></label>
-                                <input type="checkbox" name="roomStatus" id="r3" value="3">
+                                <input type="checkbox" name="packaging" id="r3" value="3">
                                 <label for="r3"></label>
-                                <input type="checkbox" name="roomStatus" id="r4" value="4">
+                                <input type="checkbox" name="packaging" id="r4" value="4">
                                 <label for="r4"></label>
-                                <input type="checkbox" name="roomStatus" id="r5" value="5">
+                                <input type="checkbox" name="packaging" id="r5" value="5">
                                 <label for="r5"></label></td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How efficient were check-in and check-out process?</p></td>
+                            <td><p class="c-margin">4.Did you receive your product within the expected timeline?</p></td>
                             <td>
-                                <input type="checkbox" name="inOutProcess" id="q41" value="1">
+                                <input type="checkbox" name="timeline" id="q41" value="1">
                                 <label for="q41"></label>
-                                <input type="checkbox" name="inOutProcess" id="q42" value="2">
+                                <input type="checkbox" name="timeline" id="q42" value="2">
                                 <label for="q42"></label>
-                                <input type="checkbox" name="inOutProcess" id="q43" value="3">
+                                <input type="checkbox" name="timeline" id="q43" value="3">
                                 <label for="q43"></label>
-                                <input type="checkbox" name="inOutProcess" id="q44" value="4">
+                                <input type="checkbox" name="timeline" id="q44" value="4">
                                 <label for="q44"></label>
-                                <input type="checkbox" name="inOutProcess" id="q45" value="5">
+                                <input type="checkbox" name="timeline" id="q45" value="5">
                                 <label for="q45"></label></td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">The comfortable were bed and bedding ?</p></td>
+                            <td><p class="c-margin">5.Please rate your experience with the delivery personnel ?</p></td>
                             <td>
-                                <input type="checkbox" name="bedding" id="q51" value="1">
+                                <input type="checkbox" name="delivery" id="q51" value="1">
                                 <label for="q51"></label>
-                                <input type="checkbox" name="bedding" id="q52" value="2">
+                                <input type="checkbox" name="delivery" id="q52" value="2">
                                 <label for="q52"></label>
-                                <input type="checkbox" name="bedding" id="q53" value="3">
+                                <input type="checkbox" name="delivery" id="q53" value="3">
                                 <label for="q53"></label>
-                                <input type="checkbox" name="bedding" id="q54" value="4">
+                                <input type="checkbox" name="delivery" id="q54" value="4">
                                 <label for="q54"></label>
-                                <input type="checkbox" name="bedding" id="q55" value="5">
+                                <input type="checkbox" name="delivery" id="q55" value="5">
                                 <label for="q55"></label>
                             </td>
                         </tr>   
                         <tr>
-                            <td><p class="c-margin">How often security was available if required?</p></td>
+                            <td><p class="c-margin">6.Was the quantity of the agricultural goods enough according to the price?</p></td>
                             <td>
-                                <input type="checkbox" name="security" id="q61" value="1">
+                                <input type="checkbox" name="reasonablePrice" id="q61" value="1">
                                 <label for="q61"></label>
-                                <input type="checkbox" name="security" id="q62" value="2">
+                                <input type="checkbox" name="reasonablePrice" id="q62" value="2">
                                 <label for="q62"></label>
-                                <input type="checkbox" name="security" id="q63" value="3">
+                                <input type="checkbox" name="reasonablePrice" id="q63" value="3">
                                 <label for="q63"></label>
-                                <input type="checkbox" name="security" id="q64" value="4">
+                                <input type="checkbox" name="reasonablePrice" id="q64" value="4">
                                 <label for="q64"></label>
-                                <input type="checkbox" name="security" id="q65" value="5">
+                                <input type="checkbox" name="reasonablePrice" id="q65" value="5">
                                 <label for="q65"></label>
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How was the quality of the food ?</p></td>
+                            <td><p class="c-margin">7.How do you rate the quality of our products as compared to our competitors?</p></td>
                             <td>
-                                <input type="checkbox" name="foodQuality" id="q71" value="1">
+                                <input type="checkbox" name="competitorProduct" id="q71" value="1">
                                 <label for="q71"></label>
-                                <input type="checkbox" name="foodQuality" id="q72" value="2">
+                                <input type="checkbox" name="competitorProduct" id="q72" value="2">
                                 <label for="q72"></label>
-                                <input type="checkbox" name="foodQuality" id="q73" value="3">
+                                <input type="checkbox" name="competitorProduct" id="q73" value="3">
                                 <label for="q73"></label>
-                                <input type="checkbox" name="foodQuality" id="q74" value="4">
+                                <input type="checkbox" name="competitorProduct" id="q74" value="4">
                                 <label for="q74"></label>
-                                <input type="checkbox" name="foodQuality" id="q75" value="5">
+                                <input type="checkbox" name="competitorProduct" id="q75" value="5">
                                 <label for="q75"></label>
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How efficient and timely was services?</p></td>
+                            <td><p class="c-margin">8.How satisfied are you with the availability of products?</p></td>
                             <td>
-                                <input type="checkbox" name="services" id="q81" value="1">
+                                <input type="checkbox" name="availability" id="q81" value="1">
                                 <label for="q81"></label>
-                                <input type="checkbox" name="services" id="q82" value="2">
+                                <input type="checkbox" name="availability" id="q82" value="2">
                                 <label for="q82"></label>
-                                <input type="checkbox" name="services" id="q83" value="3">
+                                <input type="checkbox" name="availability" id="q83" value="3">
                                 <label for="q83"></label>
-                                <input type="checkbox" name="services" id="q84" value="4">
+                                <input type="checkbox" name="availability" id="q84" value="4">
                                 <label for="q84"></label>
-                                <input type="checkbox" name="services" id="q85" value="5">
+                                <input type="checkbox" name="availability" id="q85" value="5">
                                 <label for="q85"></label>
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How complete and accurate bill was received ?</p></td>
+                            <td><p class="c-margin">9.How safe did you feel while sharing your card details?</p></td>
                             <td>
-                                <input type="checkbox" name="services" id="q91" value="1">
+                                <input type="checkbox" name="secure" id="q91" value="1">
                                 <label for="q91"></label>
-                                <input type="checkbox" name="services" id="q92" value="2">
+                                <input type="checkbox" name="secure" id="q92" value="2">
                                 <label for="q92"></label>
-                                <input type="checkbox" name="services" id="q93" value="3">
+                                <input type="checkbox" name="secure" id="q93" value="3">
                                 <label for="q93"></label>
-                                <input type="checkbox" name="services" id="q94" value="4">
+                                <input type="checkbox" name="secure" id="q94" value="4">
                                 <label for="q94"></label>
-                                <input type="checkbox" name="services" id="q95" value="5">
+                                <input type="checkbox" name="secure" id="q95" value="5">
                                 <label for="q95"></label>
                             </td>
                         </tr>
                         <tr>
-                            <td><p class="c-margin">How quiet and peaceful was the surroundings  ?</p></td>
+                            <td><p class="c-margin">10.How likely are you to buy from us again?</p></td>
                             <td>
-                                <input type="checkbox" name="surrounding" id="q111" value="1">
+                                <input type="checkbox" name="buyAgain" id="q111" value="1">
                                 <label for="q111"></label>
-                                <input type="checkbox" name="surrounding" id="q112" value="2">
+                                <input type="checkbox" name="buyAgain" id="q112" value="2">
                                 <label for="q112"></label>
-                                <input type="checkbox" name="surrounding" id="q113" value="3">
+                                <input type="checkbox" name="buyAgain" id="q113" value="3">
                                 <label for="q113"></label>
-                                <input type="checkbox" name="surrounding" id="q114" value="4">
+                                <input type="checkbox" name="buyAgain" id="q114" value="4">
                                 <label for="q114"></label>
-                                <input type="checkbox" name="surrounding" id="q115" value="5">
+                                <input type="checkbox" name="buyAgain" id="q115" value="5">
                                 <label for="q115"></label>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><p class="c-margin">The homestay was easy to locate?</p></td>
-                            <td>
-                                <input type="checkbox" name="location" id="q121" value="1">
-                                <label for="q121"></label>
-                                <input type="checkbox" name="location" id="q122" value="2">
-                                <label for="q122"></label>
-                                <input type="checkbox" name="location" id="q123" value="3">
-                                <label for="q123"></label>
-                                <input type="checkbox" name="location" id="q124" value="4">
-                                <label for="q124"></label>
-                                <input type="checkbox" name="location" id="q125" value="5">
-                                <label for="q125"></label>
                             </td>
                         </tr>
                     </table>

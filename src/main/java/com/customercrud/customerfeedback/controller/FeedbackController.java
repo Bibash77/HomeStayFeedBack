@@ -1,4 +1,4 @@
-package com.customercrud.customerfeedback.resources;
+package com.customercrud.customerfeedback.controller;
 
 import com.customercrud.customerfeedback.entity.FeedBack;
 import com.customercrud.customerfeedback.entity.User;

@@ -6,14 +6,14 @@
     <title>Title</title>
     <style>
         label:before {
-            content: '☆';
+            content: '♡';
             color: black;
             font-size: 1em;
         }
 
         label.on:before {
-            content: '★';
-            color: #045DE9;
+            content: '♡';
+            color: #ff0000;
             /* uncomment for iOS */
             /*   font-size: 2.4em;
               top: -0.1em;
@@ -21,8 +21,8 @@
         }
 
         input:checked + label:before {
-            content: '★';
-            color: #045DE9;
+            content: '♡';
+            color: #ff0000;
             /* uncomment for iOS */
             /*   font-size: 2.4em;
               top: -0.1em;
@@ -48,7 +48,7 @@
             border-radius: 11px;
         }
 
-        input[type=radio] {
+        input[type=checkbox] {
             display: none;
             -webkit-appearance: none;
         }
@@ -69,15 +69,15 @@
                               onclick="window.location.href = '/feed-back/${user.id}'">
                               <div class="col-md-12">
                                   <span class="float-right">
-                                     <input type="radio" name="location" id="q121" value="1" ${user.feedBack.rating >= 1? 'checked' : ''}>
+                                     <input type="checkbox" name="location" id="q121" value="1" ${user.feedBack.rating >= 1? 'checked' : ''}>
             <label for="q121"></label>
-            <input type="radio" name="${loop.index}" id="q122" value="2" ${user.feedBack.rating >= 2? 'checked' : ''}>
+            <input type="checkbox" name="${loop.index}" id="q122" value="2" ${user.feedBack.rating >= 2? 'checked' : ''}>
             <label for="q122"></label>
-            <input type="radio" name="${loop.index}" id="q123" value="3" ${user.feedBack.rating >= 3? 'checked' : ''}>
+            <input type="checkbox" name="${loop.index}" id="q123" value="3" ${user.feedBack.rating >= 3? 'checked' : ''}>
             <label for="q123"></label>
-            <input type="radio" name="${loop.index}" id="q124" value="4" ${user.feedBack.rating >= 4? 'checked' : ''}>
+            <input type="checkbox" name="${loop.index}" id="q124" value="4" ${user.feedBack.rating >= 4? 'checked' : ''}>
             <label for="q124"></label>
-            <input type="radio" name="${loop.index}" id="q125" value="5" ${user.feedBack.rating >= 5? 'checked' : ''}>
+            <input type="checkbox" name="${loop.index}" id="q125" value="5" ${user.feedBack.rating >= 5? 'checked' : ''}>
             <label for="q125"></label>
                                 </span>
                                   <strong class="my-0"><u>${user.fullName}</u>
@@ -107,7 +107,7 @@
 </div>
 </body>
 <script>
-    $('input[type="radio"]').click(function () {
+    $('input[type="checkbox"]').click(function () {
         console.log("trigger");
         var theNumber = $(this).attr('id').slice(-1);
         $(this).siblings('label').each(function () {
